@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+//use Illuminate\Http\Request;
 use App\Http\Controllers\LevelController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\UserController;
@@ -20,7 +21,6 @@ Route::get('/', function () {
 });
 
 Route::get('/level', [LevelController::class, 'index']);
-Route::get('/kategori', [KategoriController::class, 'index']);
 Route::get('/user', [UserController::class, 'index'])->name('/user');
 
 //Praktikum 2.6
@@ -29,4 +29,9 @@ Route::get('/user/ubah/{id}', [UserController::class, 'ubah'])->name('/user/ubah
 Route::get('/user/hapus/{id}', [UserController::class, 'hapus'])->name('/user/hapus');
 Route::post('/user/tambah_simpan', [UserController::class, 'tambah_simpan'])->name('/user/tambah_simpan');
 Route::put('/user/ubah_simpan/{id}', [UserController::class, 'ubah_simpan'])->name('/user/ubah_simpan');
+
+//Jobsheet5
+Route::get('/kategori', [KategoriController::class, 'index']);
+Route::get('/kategori/create', [KategoriController::class, 'create']);
+Route::post('/kategori', [KategoriController::class, 'store']);
 
