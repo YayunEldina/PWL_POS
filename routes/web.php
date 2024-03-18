@@ -41,3 +41,6 @@ Route::get('/kategori/create', [KategoriController::class, 'create'])->name('cre
 //Tugas 3
 Route::get('/kategori/edit/{id}', [KategoriController::class, 'edit'])->name('kategori.edit');
 Route::put('/kategori/edit_simpan/{id}', [KategoriController::class, 'edit_simpan'])->name('kategori.edit_simpan');
+
+//Tugas 4
+Route::get('/kategori/hapus/{id}', [KategoriController::class, 'hapus'])->name('kategori.hapus');
