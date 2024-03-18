@@ -2,6 +2,7 @@
 
 return [
 
+    'manage_kategori' => 'MANAGE KATEGORI',
     'main_navigation' => 'MAIN NAVIGATION',
     'blog' => 'Blog',
     'pages' => 'Pages',
