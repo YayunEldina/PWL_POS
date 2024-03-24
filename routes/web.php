@@ -44,3 +44,6 @@ Route::put('/kategori/edit_simpan/{id}', [KategoriController::class, 'edit_simpa
 
 //Tugas 4
 Route::get('/kategori/hapus/{id}', [KategoriController::class, 'hapus'])->name('kategori.hapus');
+
+//Jobsheet 6
+
