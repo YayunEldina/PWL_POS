@@ -46,4 +46,7 @@ Route::put('/kategori/edit_simpan/{id}', [KategoriController::class, 'edit_simpa
 Route::get('/kategori/hapus/{id}', [KategoriController::class, 'hapus'])->name('kategori.hapus');
 
 //Jobsheet 6
+// A9
+Route::post('/level/store', [LevelController::class, 'store'])->name('/level/store');
+Route::get('/level/create', [LevelController::class, 'create'])->name('level.create');
 
