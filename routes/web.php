@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LevelController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\POSController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,8 +33,7 @@ Route::put('/user/ubah_simpan/{id}', [UserController::class, 'ubah_simpan'])->na
 
 //Jobsheet5
 Route::get('/kategori', [KategoriController::class, 'index']);
-Route::get('/kategori/create', [KategoriController::class, 'create']);
-Route::post('/kategori', [KategoriController::class, 'store']);
+
 
 //Tugas 1
 Route::get('/kategori/create', [KategoriController::class, 'create'])->name('create');
@@ -50,3 +50,9 @@ Route::get('/kategori/hapus/{id}', [KategoriController::class, 'hapus'])->name('
 Route::post('/level/store', [LevelController::class, 'store'])->name('/level/store');
 Route::get('/level/create', [LevelController::class, 'create'])->name('level.create');
 
+//B2
+Route::get('/kategori/create', [KategoriController::class, 'create']);
+Route::post('/kategori', [KategoriController::class, 'store']);
+
+//D2
+Route::resource('m_user', POSController::class);
