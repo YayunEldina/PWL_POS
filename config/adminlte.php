@@ -334,10 +334,18 @@ return [
             'url' => 'admin/settings',
             'icon' => 'fas fa-fw fa-user',
         ],
+        ['header' => 'Menu'],
+        //Kategori Menu
         [
-            'text' => 'change_password',
-            'url' => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'text' => 'Kategori',
+            'url' => '/Level',
+            'icon' => 'fas fa-fw fa-list',
+        ],
+        //m_user menu
+        [
+            'text' => 'm_user',
+            'url' => '/m_user',
+            'icon' => 'fas fa-fw fa-list',
         ],
         [
             'text' => 'multilevel',

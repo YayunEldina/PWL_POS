@@ -6,6 +6,7 @@ use App\Http\Controllers\LevelController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\POSController;
+use App\Http\Controllers\WelcomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -56,3 +57,6 @@ Route::post('/kategori', [KategoriController::class, 'store']);
 
 //D2
 Route::resource('m_user', POSController::class);
+
+//Jobsheet 7
+Route::get('/', [WelcomeController::class,'index']);
