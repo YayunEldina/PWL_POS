@@ -24,6 +24,15 @@
             </div> --}}
             
                
+            <!-- <div class="form-group row">
+                <label class="col-1 control-label col-form-label">Barang</label>
+                <div class="col-11">
+                    <input type="text" class="form-control" id="barang_nama" name="barang_nama" value="{{ old('barang_nama') }}" required>
+                    @error('barang_id')
+                    <small class="form-text text-danger">{{ $message }}</small>
+                    @enderror
+                </div>
+            </div> -->
             <div class="form-group row">
                 <label class="col-1 control-label col-form-label">ID Barang</label>
                 <div class="col-11">

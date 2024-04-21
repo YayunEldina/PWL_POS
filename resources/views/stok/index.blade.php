@@ -23,7 +23,7 @@
                             <select class="form-control" id="stok_id" name="stok_id" required>
                                 <option value="">- Semua -</option>
                                 @foreach($stok as $item)
-                                    <option value="{{ $item->stok_id }}">{{ $item->barang_id }}</option>
+                                    <option value="{{ $item->stok_id }}">{{ $item->barang_nama }}</option>
                                 @endforeach
                             </select>
                             <small class="Form-text text-muted">Stok</small>
@@ -35,8 +35,8 @@
                 <thead>
                     <tr>
                         <th>stok_id</th>
-                        <th>Barang_id</th>
-                        <th>User_id</th>
+                        <th>Barang_nama</th>
+                        <th>User_nama</th>
                         <th>stok_tanggal</th>
                         <th>stok_jumlah</th>
                         <th>Aksi</th>
@@ -71,16 +71,28 @@
                         searchable: false
                     },
                     {
-                        data: "barang_id",
+                        data: "barang.barang_nama",
                         className: "",
                         orderable: true,
                         searchable: true
                     },
+                    // {
+                    //     data: "barang_id",
+                    //     className: "",
+                    //     orderable: true,
+                    //     searchable: true
+                    // },
+                    // {
+                    //     data: "user.nama",
+                    //     className: "",
+                    //     orderable: true,
+                    //     searchable: true
+                    // },
                     {
-                        data: "user_id",
+                        data: "user.nama",
                         className: "",
-                        orderable: true,
-                        searchable: true
+                        orderable: false,
+                        searchable: false
                     },
                     {
                         data: "stok_tanggal",

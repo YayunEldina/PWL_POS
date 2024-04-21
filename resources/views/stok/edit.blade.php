@@ -26,6 +26,15 @@
                             @enderror
                         </div>
                     </div>
+                    <!-- <div class="form-group row">
+                        <label class="col-1 control-label col-form-label">Barang</label>
+                        <div class="col-11">
+                            <input type="number" class="form-control" id="barang_nama" name="barang_nama" value="{{ old('nama_barang', $stok->barang_nama) }}" required>
+                            @error('barang_nama')
+                                <small class="form-text text-danger">{{ $message }}</small>
+                            @enderror
+                        </div>
+                    </div> -->
                     <div class="form-group row">
                         <label class="col-1 control-label col-form-label">ID User</label>
                         <div class="col-11">
@@ -36,11 +45,11 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-1 control-label col-form-label">Stok Tanggal</label>
+                        <label class="col-1 control-label col-form-label">Stok tanggal</label>
                         <div class="col-11">
-                            <input type="date" class="form-control" id="stok_tanggal" name="stok_tanggal" value="{{ old('stok_tanggal', $stok->stok_tanggal) }}" required>
+                            <input type="datetime-local" class="form-control" id="stok_tanggal" name="stok_tanggal" value="{{ old('stok_tanggal', date('Y-m-d\TH:i', strtotime($stok->stok_tanggal))) }}" required>
                             @error('stok_tanggal')
-                                <small class="form-text text-danger">{{ $message }}</small>
+                            <small class="form-text text-danger">{{ $message }}</small>
                             @enderror
                         </div>
                     </div>

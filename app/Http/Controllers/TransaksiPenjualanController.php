@@ -34,7 +34,7 @@ class TransaksiPenjualanController extends Controller
     {
         $penjualans = TransaksiPenjualanModel::select('penjualan_id', 'user_id', 'pembeli', 'penjualan_kode', 'penjualan_tanggal')->with('user');
 
-        //Filter data barang berdasarkan level_id
+        //Filter data barang berdasarkan user_id
         if ($request->user_id) {
             $penjualans->where('user_id', $request->user_id);
         }
@@ -113,6 +113,8 @@ class TransaksiPenjualanController extends Controller
     {
         $penjualan = TransaksiPenjualanModel::find($id);
         $detailTransaksi = DetailTransaksiPenjualanModel::where('penjualan_id', $id)->get();
+
+        ($detailTransaksi);
 
         $breadcrumb = (object) [
             'title' => 'Detail Transaksi Penjualan',

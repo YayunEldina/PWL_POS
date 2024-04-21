@@ -12,14 +12,16 @@ class StokModel extends Model
     use HasFactory;
     protected $table = "t_stoks";
     protected $primaryKey = "stok_id";
-    protected $fillable = ['stok_id', 'barang_id', 'user_id', 'stok_tanggal', 'stok_jumlah'];
-    public function user()
+    // protected $fillable = ['stok_id', 'barang_id', 'user_id', 'stok_tanggal', 'stok_jumlah'];
+    protected $fillable = ['stok_id', 'barang_nama', 'user_nama', 'stok_tanggal', 'stok_jumlah'];
+    
+    public function user(): BelongsTo
     {
-        return $this->belongsTo(User::class, 'user_id');
+        return $this->belongsTo(UserModel::class, 'user_id', 'user_id');
     }
 
-    public function barang()
+    public function barang(): BelongsTo
     {
-        return $this->belongsTo(BarangModel::class, 'barang_id');
+        return $this->belongsTo(BarangModel::class, 'barang_id', 'barang_id');
     }
 }
