@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\LogoutController;
 use App\Http\Controllers\Api\LoginController;
 use App\Http\Controllers\Api\RegisterController;
 use Illuminate\Http\Request;
@@ -15,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+
+//Logout
+Route::post('/logout', App\Http\Controllers\Api\LogoutController::class)->name('logout');
 
 //login
 Route::post('/login', App\Http\Controllers\Api\LoginController::class)->name('login');
