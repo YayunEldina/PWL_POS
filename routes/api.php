@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\KategoriController;
 use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\LevelController;
 use App\Http\Controllers\Api\LogoutController;
@@ -18,6 +19,13 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+//Kategori
+Route::get('kategoris', [KategoriController::class, 'index']);
+Route::post('kategoris', [KategoriController::class, 'store']);
+Route::get('kategoris/{kategori}', [KategoriController::class, 'show']);
+Route::put('kategoris/{kategori}', [KategoriController::class, 'update']);
+Route::delete('kategoris/{kategori}', [KategoriController::class, 'destroy']);
+
 //User
 Route::get('users', [UserController::class, 'index']);
 Route::post('users', [UserController::class, 'store']);
