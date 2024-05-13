@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\BarangController;
 use App\Http\Controllers\Api\KategoriController;
+use App\Http\Controllers\Api\PenjualanController;
 use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\LevelController;
 use App\Http\Controllers\Api\LogoutController;
@@ -20,6 +21,14 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+
+//Penjualan JS11
+Route::get('penjualans',[PenjualanController::class,'index']);
+Route::post('penjualans',[PenjualanController::class,'store']);
+Route::get('penjualans/{penjualans}',[PenjualanController::class,'show']);
+Route::put('penjualans/{penjualans}',[PenjualanController::class,'update']);
+Route::delete('penjualans/{penjualans}',[PenjualanController::class,'destroy']);
+
 //Barang JS11
 Route::get('barangs', [BarangController::class, 'index']);
 Route::post('barangs', [BarangController::class, 'store']);
